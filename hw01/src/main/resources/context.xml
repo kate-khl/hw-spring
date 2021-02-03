@@ -22,8 +22,17 @@
 	
 	<bean id="app" class="hw01.Application">
 	        <constructor-arg index="0" > <ref bean="scanner"/></constructor-arg>
+	        <constructor-arg index="1" > <ref bean="personData"/></constructor-arg>
+	        <constructor-arg index="2" > <ref bean="questionService"/></constructor-arg>
 	</bean> 
 	
+	<bean id="personData" class="hw01.PersonData"></bean> 	
+
+	<bean id="csvService" class="hw01.service.CsvService"></bean> 	
+
+	<bean id="questionService" class="hw01.service.QuestionServiceImpl">
+		<constructor-arg index="0" > <ref bean="csvService"/></constructor-arg>
+	</bean> 	
 
 	
 
