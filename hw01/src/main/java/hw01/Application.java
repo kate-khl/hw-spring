@@ -23,7 +23,9 @@ public class Application {
 		
 		for(QuestionDto q : questions) {
 			System.out.println("Ответьте на вопрос: ");
-			
+			System.out.println("№" + q.getQuestionNumber() + " " 
+								+ q.getQuestion() + " " + q.getVariantsAnsvers().toString());
+			scan(scanner);
 		}
 		
 	}

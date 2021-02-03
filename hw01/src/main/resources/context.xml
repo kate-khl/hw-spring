@@ -28,10 +28,10 @@
 	
 	<bean id="personData" class="hw01.PersonData"></bean> 	
 
-	<bean id="csvService" class="hw01.service.CsvService"></bean> 	
+	<bean id="utils" class="hw01.service.Utils"></bean> 	
 
 	<bean id="questionService" class="hw01.service.QuestionServiceImpl">
-		<constructor-arg index="0" > <ref bean="csvService"/></constructor-arg>
+		<constructor-arg index="0" > <ref bean="utils"/></constructor-arg>
 	</bean> 	
 
 	

@@ -11,17 +11,7 @@ public class QuestionDto {
 	private List<String> variantsAnsvers = new ArrayList<>();
 	private String trueAnswer;
 	
-	public static QuestionDto getQuestionFromString (String qString) {
-		
-		String[] fields = qString.split(",");
-		
-		QuestionDto question = new QuestionDto();
-		question.questionNumber = Integer.parseInt(fields[0]);
-		question.question = fields[1];
-		question.variantsAnsvers = Arrays.asList(fields[2].split(";"));
-		question.trueAnswer = fields[3];
-		return question;
-	}
+
 
 	public Integer getQuestionNumber() {
 		return questionNumber;
