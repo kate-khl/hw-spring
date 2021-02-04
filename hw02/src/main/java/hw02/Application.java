@@ -3,14 +3,19 @@ package hw02;
 import java.util.List;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import hw02.dto.QuestionDto;
 import hw02.service.QuestionService;
 
+@Component
 public class Application {
 	private Scanner scanner; 
 	private PersonData personData;
 	private QuestionService questionService;
 	
+	@Autowired
 	public Application(Scanner scanner, PersonData personData, QuestionService questionService) {
 		this.scanner = scanner;
 		this.personData = personData;
