@@ -1,6 +1,8 @@
 package hw01;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PersonData {
@@ -19,7 +21,17 @@ public class PersonData {
 	}
 	
 	public Boolean getAnswer(Integer qNumber) {
-		return answers.get(qNumber).booleanValue();
-		
+		return answers.get(qNumber).booleanValue();	
+	}
+	
+	public Integer countOfTrueAnswers() {
+		Integer count = 0;
+		for (Boolean t : answers.values()) {
+			if(t) count++;
+		}
+		return count;
+	}
+	public Integer countOfAnswers() {
+		return answers.size();
 	}
 }
