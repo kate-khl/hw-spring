@@ -1,8 +1,10 @@
 package hw02;
 
+import java.rmi.registry.LocateRegistry;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
@@ -12,6 +14,8 @@ public class PersonData {
 
 	private String name;
 	private Map<Integer, Boolean> answers = new HashMap<>();
+	private Locale locale;
+	
 	public String getName() {
 		return name;
 	}
@@ -37,4 +41,12 @@ public class PersonData {
 	public Integer countOfAnswers() {
 		return answers.size();
 	}
+	public Locale getLocale() {
+		return locale;
+	}
+	public void setLocale(Locale locale) {
+		this.locale = locale;
+	}
+	
+	
 }
