@@ -4,18 +4,6 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!--  
-	<bean id="sys" class="java.lang.System"/>
-	<bean id="scanner" class="java.util.Scanner">
-	        <constructor-arg index="0" value="#{sys.in}" ></constructor-arg>
-	</bean>
-	-->
-
-	<!--  
-	<bean id="scanner" class="java.util.Scanner">
-	        <constructor-arg index="0" value="#{T(java.lang.System).in}" ></constructor-arg>
-	</bean>
-	-->
 	<bean id="scanner" class="java.util.Scanner">
 	        <constructor-arg index="0" value="#{T(java.lang.System).in}" ></constructor-arg>
 	</bean>
@@ -33,7 +21,5 @@
 	<bean id="questionService" class="hw01.service.QuestionServiceImpl">
 		<constructor-arg index="0" > <ref bean="utils"/></constructor-arg>
 	</bean> 	
-
-	
 
 </beans>
