@@ -8,7 +8,7 @@ public interface LocalizationService {
 
 	public String getEnterName();
 	
-	public String  getHelloUser(String name);
+	public String getHelloUser(String name);
 	
 	public String getAnswerTheQuestion();
 	

@@ -12,17 +12,18 @@ import org.khl.hw03.dto.QuestionDto;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Utils {
+public class CsvParser {
 	
-	public List<QuestionDto> getQuestionsFromFile(String fileName)
-	{
+	public List<QuestionDto> getQuestionDtoList(InputStream is) {
+		
 		List<QuestionDto> questions = new ArrayList<>();	
 		
-		List<String> stringQuestion = getStringListFromCsv(getClass().getResourceAsStream("/" + fileName));
+		List<String> stringQuestion = getStringListFromCsv(is);
 		for (String s : stringQuestion) {
 			questions.add(getQuestionFromCsvString(s));
 		}
 		return questions;
+		
 	}
 	
 	private List<String> getStringListFromCsv(InputStream is)

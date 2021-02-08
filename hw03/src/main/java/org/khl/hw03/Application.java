@@ -8,9 +8,8 @@ import javax.annotation.PostConstruct;
 
 import org.khl.hw03.dto.QuestionDto;
 import org.khl.hw03.service.LocalizationService;
-import org.khl.hw03.service.QuestionService;
+import org.khl.hw03.service.QuestionSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,14 +17,14 @@ public class Application {
 	
 	private Scanner scanner; 
 	private PersonData personData;
-	private QuestionService questionService;
+	private QuestionSource questionSource;
 	private LocalizationService locService;
 	
 	@Autowired
-	public Application(Scanner scanner, PersonData personData, QuestionService questionService, LocalizationService locService) {
+	public Application(Scanner scanner, PersonData personData, QuestionSource questionSource, LocalizationService locService) {
 		this.scanner = scanner;
 		this.personData = personData;
-		this.questionService = questionService;
+		this.questionSource = questionSource;
 		this.locService = locService;
 	}
 
@@ -35,7 +34,7 @@ public class Application {
 		setLocalization();
 		greeting();
 		
-		List<QuestionDto> questions = questionService.getQuestions();
+		List<QuestionDto> questions = questionSource.getQuestions();
 		for(QuestionDto q : questions) {
 			askQuestion(q);
 			checkAnswer(q, scanner.nextLine());
