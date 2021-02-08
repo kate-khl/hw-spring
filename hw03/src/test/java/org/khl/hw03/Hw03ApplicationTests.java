@@ -1,4 +1,4 @@
-package org.khl.hw03.hw03;
+package org.khl.hw03;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

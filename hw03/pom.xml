@@ -8,7 +8,7 @@
 		<version>2.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.khl.hw03</groupId>
+	<groupId>org.khl</groupId>
 	<artifactId>hw03</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>hw03</name>
